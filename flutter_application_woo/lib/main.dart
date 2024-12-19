@@ -145,7 +145,9 @@ class HomePage extends StatelessWidget {
                     child: Stack(children: [
                       Image.network(
                         dataList[index]["imgUrl"],
-                        fit: BoxFit.fitHeight,
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.cover,
                       ),
                       Center(
                         child: Text(
