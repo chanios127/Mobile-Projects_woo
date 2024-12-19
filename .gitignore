@@ -1,0 +1,10 @@
+.DS_Store
+flutter_application_woo/.vscode/launch.json
+flutter_application_woo/ios/Podfile
+flutter_application_woo/ios/Podfile.lock
+flutter_application_woo/ios/build/XCBuildData/6f112d613665395e44da23a19b29a331.xcbuilddata/build-request.json
+flutter_application_woo/ios/build/XCBuildData/6f112d613665395e44da23a19b29a331.xcbuilddata/description.msgpack
+flutter_application_woo/ios/build/XCBuildData/6f112d613665395e44da23a19b29a331.xcbuilddata/manifest.json
+flutter_application_woo/ios/build/XCBuildData/6f112d613665395e44da23a19b29a331.xcbuilddata/target-graph.txt
+flutter_application_woo/ios/build/XCBuildData/6f112d613665395e44da23a19b29a331.xcbuilddata/task-store.msgpack
+.DS_Store
