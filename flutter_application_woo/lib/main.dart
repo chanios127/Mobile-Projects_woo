@@ -185,7 +185,7 @@ class HomePage extends StatelessWidget {
         centerTitle: false, // title 중앙 정렬
         iconTheme: IconThemeData(color: Colors.black), // app bar icon color
         title: Text(
-          "Food Recipe",
+          "Park woo's Food Recipe ",
           style: TextStyle(
             color: Colors.black,
             fontSize: 28,
