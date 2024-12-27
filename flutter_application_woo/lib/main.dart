@@ -58,32 +58,119 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       //Drawer==================================================================================================================================================================
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
+        child: Column(
           children: [
+            // DrawerHeader=======================================================================================================================================
             DrawerHeader(
+              margin: const EdgeInsets.all(0),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.amber,
               ),
-              child: Column(
+              child: SizedBox(
+                width: double.infinity, // 가득 채우기
+                child: Column(
+                  children: [
+                    /// 동그란 배경
+                    CircleAvatar(
+                      radius: 36,
+                      backgroundColor: Colors.white,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+
+                        /// 이미지
+                        child: Image.network(
+                          "https://i.ibb.co/CwzHq4z/trans-logo-512.png",
+                          width: 62,
+                        ),
+                      ),
+                    ),
+
+                    /// 닉네임 상단 여백
+                    SizedBox(height: 13),
+
+                    /// 닉네임
+                    Text(
+                      "닉네임",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    /// 이메일
+                    Text(
+                      "hello@world.com",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // DrawerHeader=======================================================================================================================================
+
+            //Event Banner=======================================================================================================================================
+
+            // 특정 비율로 위젯을 보여주기
+            AspectRatio(
+              aspectRatio: 12 / 4, // 가로 : 세로 = 12 : 4 (이미지를 12:4로 준비했어요)
+              /// 이벤트 배너 리스트
+              /// 스크롤을 하는데, 특정 항목이 스냅이 걸리도록 만들고 싶은 경우 PageView를 사용해요.
+              child: PageView(
                 children: [
-                  Text(
-                    '메뉴',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                    ),
+                  Image.network(
+                    "https://i.ibb.co/Q97cmkg/sale-event-banner1.jpg",
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(32),
-                    child: Image.network(
-                      "https://i.ibb.co/CwzHq4z/trans-logo-512.png",
-                      width: 23,
-                    ),
+                  Image.network(
+                    "https://i.ibb.co/GV78j68/sale-event-banner2.jpg",
+                  ),
+                  Image.network(
+                    "https://i.ibb.co/R3P3RHw/sale-event-banner3.jpg",
+                  ),
+                  Image.network(
+                    "https://i.ibb.co/LRb1VYs/sale-event-banner4.jpg",
                   ),
                 ],
               ),
             ),
+            //Event Banner=======================================================================================================================================
+
+            //MENU=======================================================================================================================================
+
+            /// 구매 내역
+            ListTile(
+              title: Text(
+                '구매내역',
+                style: TextStyle(fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.black,
+              ),
+              onTap: () {
+                // 클릭시 drawer 닫기
+                Navigator.pop(context);
+              },
+            ),
+
+            /// 레시피 공유하기
+            ListTile(
+              title: Text(
+                '저장한 레시피',
+                style: TextStyle(fontSize: 18),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.black,
+              ),
+              onTap: () {
+                // 클릭시 drawer 닫기
+                Navigator.pop(context);
+              },
+            ),
+            //MENU=======================================================================================================================================
           ],
         ),
       ),
