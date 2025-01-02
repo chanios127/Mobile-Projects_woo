@@ -118,7 +118,7 @@ class StarbucksSecondPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text("Starbucks 두 번째 페이지"),
-      ),
+      ),  
     );
   }
 }
